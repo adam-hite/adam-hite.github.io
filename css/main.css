@@ -221,7 +221,7 @@ p {
 }
 
 .section3 {
-  background-color: #e9f6f6;
+  /*background-color: #e9f6f6;*/
   padding: 2rem;
 }
 
@@ -308,7 +308,7 @@ p {
 }
 
 footer {
-  background-color: #e9f6f6;
+  /*background-color: #e9f6f6;*/
   padding: 3rem 1rem 4rem;
   text-align: center;
 }

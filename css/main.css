@@ -601,6 +601,7 @@ header p {
 h1 {
   font-family: 'Libre Baskerville', serif;
   font-size: 48px;
+  line-height: 1.2;
   margin-top: 0;
 }
 
@@ -686,11 +687,6 @@ p {
 
 .work-grid img {
   box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-  transition: opacity .35s;
-}
-
-.work-grid img:hover {
-  opacity: .9;
 }
 
 .work-grid p {

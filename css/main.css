@@ -557,7 +557,7 @@ body {
   /*background-image: url(../img/hypnotize.png);
   background-size: 200px auto;*/
   font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -685,7 +685,12 @@ p {
 }
 
 .work-grid img {
-  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+  transition: opacity .35s;
+}
+
+.work-grid img:hover {
+  opacity: .9;
 }
 
 .work-grid p {

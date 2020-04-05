@@ -1,1 +1,269 @@
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */img{max-width:100%}html{box-sizing:border-box}footer,header,main,section{display:block}html{padding:0}a:focus,a:hover{text-decoration:underline}h1{margin:.67em 0}a{background-color:transparent;-webkit-text-decoration-skip:objects}img{border-style:none;height:auto}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#222;font-size:1em;line-height:1.4;margin:0}*{box-sizing:inherit}::-moz-selection{background:#b3d4fc;text-shadow:none}img{vertical-align:middle}body{font-family:'Open Sans',sans-serif;font-size:18px;line-height:1.6;padding:0}.footer-links,h1,h2,h4{font-family:'Libre Baskerville',serif}a{color:#e3561d;text-decoration:none}header{background-color:#fff;padding:4rem}.section1{margin:0 auto;max-width:720px}h3,h4{margin-bottom:0}h1,p{margin-top:0}header p{font-size:24px}h1{font-size:48px;line-height:1.2}h2{font-size:24px}@media only screen and (min-width:720px){header{padding:8rem 4rem}h2{font-size:36px}}.work-grid p{font-size:16px}.section2{display:flex;flex-direction:column;margin-bottom:2rem}.section2 .first{background:url(img/photo.jpg) 50% 50% no-repeat;background-size:cover;min-height:320px}@media only screen and (min-width:720px){.section2{flex-direction:row;margin-bottom:6rem}.section2 .first,.section2 .second{width:50%}.section2 .first{background-size:720px auto}}.section2 .second{padding:1rem 4rem}.section2 .second h4{margin-bottom:1rem}.section3{padding:2rem}.work-grid{list-style:none;margin:0;padding:0}.work-grid li{margin-bottom:6rem}.work-grid img{box-shadow:0 0 20px rgba(0,0,0,.2)}.work-grid p{color:#999;margin-bottom:0}@media only screen and (min-width:540px){.work-grid{display:flex;flex-wrap:wrap}.work-grid li{margin-bottom:2rem;padding:1rem;width:50%}}@media only screen and (min-width:720px){.work-grid li{width:33.333%}}footer{padding:3rem 1rem 4rem;text-align:center}.footer-links{color:#e3561d}.small{color:#999;font-size:12px}body{margin:0 auto;max-width:1440px}
+@font-face {
+    font-family: 'courier_primeregular';
+    src: url('/fonts/courier_prime-webfont.woff2') format('woff2'),
+         url('/fonts/courier_prime-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroy-extrabold';
+    src: url('/fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+         url('/fonts/gilroy-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    line-height: 1.15;
+    font-display: swap;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+header,
+section {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+main {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+img {
+    border-style: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {
+    vertical-align: middle;
+}
+
+body {
+	font-family: 'courier_primeregular', Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace; 
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+a {
+    color: #004CFF;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+header {
+    background-color: #fff;
+    padding: 4rem;
+}
+
+@media only screen and (min-width: 720px) {
+    header {
+      padding: 8rem 4rem;
+    }
+}
+  .section1 {
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+header p {
+    font-size: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+}
+
+h1 {
+    font-family: gilroy-extrabold, Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: gilroy-extrabold, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+@media only screen and (min-width: 720px) {
+    h2 {
+      font-size: 36px;
+    }
+}
+
+h3 {
+    font-family: gilroy-extrabold, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+}
+
+h4 {
+    font-family: gilroy-extrabold, Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 720px) {
+    .section2 {
+      flex-direction: row;
+      margin-bottom: 6rem;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .section2 .first,
+  .section2 .second {
+      width: 50%;
+    }
+}
+  .section2 .first img {
+    width: 100%;
+    height: 100%;
+    max-height: 540px;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media only screen and (min-width: 720px) {
+    .section2 .first {
+      background-size: 720px auto;
+    }
+}
+  .section2 .second {
+    padding: 1rem 4rem;
+}
+
+.section2 .second h4 {
+    margin-bottom: 1rem;
+}
+
+.section3 {
+    padding: 2rem;
+}
+
+.work-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.work-grid li {
+    margin-bottom: 6rem;
+}
+
+.work-grid ul {
+    margin-top: 1rem;
+}
+
+.work-grid li li {
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;;
+}
+
+.work-grid img {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.work-grid p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 540px) {
+    .work-grid {
+      display: flex;
+      flex-wrap: wrap;
+}
+
+.work-grid li {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      width: 50%;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .work-grid li {
+      width: 33.333%;
+    }
+}
+  footer {
+    padding: 3rem 1rem 4rem;
+    text-align: center;
+}
+
+footer .small {
+    font-size: 14px;
+    color: #666;
+}
+

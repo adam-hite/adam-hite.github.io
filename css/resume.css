@@ -1,3 +1,6 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+/* 04/070/20 */
+
 @font-face {
     font-family: 'courier_primeregular';
     src: url('/fonts/courier_prime-webfont.woff2') format('woff2'),
@@ -62,7 +65,8 @@ ol[class] {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -87,9 +91,12 @@ select {
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -120,7 +127,7 @@ h1,
 h2,
 h3 {
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
     font-family: 'gilroy-extrabold';
     font-weight: normal;
 }
@@ -154,9 +161,10 @@ h4 strong {
 .resume {
     font-family: courier_primeregular;
     font-size: 16px;
+    display: -ms-grid;
     display: grid;
     grid-gap: 2vw;
-    grid-template-areas:
+        grid-template-areas:
         "photo"
         "name"
         "about"
@@ -164,7 +172,9 @@ h4 strong {
         "skills"
         "education"
         "community";
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: minmax(250px, auto);
     grid-template-rows: minmax(250px, auto);
     margin: 0 auto;
     max-width: 1440px;
@@ -180,21 +190,29 @@ h4 strong {
 
 @media only screen and (min-width: 780px) {
     .resume {
-        grid-template-areas:
+            grid-template-areas:
             "name  photo"
             "work  about"
             "work  skills"
             "education community";
+        -ms-grid-columns: 2fr 2vw 1fr;
         grid-template-columns: 2fr 1fr;
+        -ms-grid-rows: minmax(250px, 250px) 2vw 1fr 2vw 1fr 2vw 1fr;
         grid-template-rows: minmax(250px, 250px) 1fr 1fr 1fr;
     }
 }
 
 .name {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     grid-area: name;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
 }
 
 .name p {
@@ -202,10 +220,15 @@ h4 strong {
 }
 
 .photo {
-    align-items: center;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -webkit-box-align: center;
+            align-items: center;
+    display: -webkit-box;
     display: flex;
     grid-area: photo;
-    justify-content: center;;
+    -webkit-box-pack: center;
+            justify-content: center;;
 }
 
 .photo picture {
@@ -216,23 +239,65 @@ h4 strong {
 }
 
 .about {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
     grid-area: about;
 }
 
 .work {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
     grid-area: work;
 }
 
 .education {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
     grid-area: education;
 }
 
 .skills {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
     grid-area: skills;
 }
 
 .community {
+    -ms-grid-row: 13;
+    -ms-grid-column: 1;
     grid-area: community;
+}
+
+@media only screen and (min-width: 780px) {
+    .name {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+    .photo {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+    .about {
+        -ms-grid-row: 3;
+        -ms-grid-column: 3;
+    }
+    .work {
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 1;
+    }
+    .education {
+        -ms-grid-row: 7;
+        -ms-grid-column: 1;
+    }
+    .skills {
+        -ms-grid-row: 5;
+        -ms-grid-column: 3;
+    }
+    .community {
+        -ms-grid-row: 7;
+        -ms-grid-column: 3;
+    }
 }
 
 .resume--date {

@@ -2,6 +2,7 @@
     font-family: 'courier_primeregular';
     src: url('/fonts/courier_prime-webfont.woff2') format('woff2'),
          url('/fonts/courier_prime-webfont.woff') format('woff');
+    font-display: swap;
     font-weight: normal;
     font-style: normal;
 }
@@ -10,6 +11,7 @@
     font-family: 'gilroy-extrabold';
     src: url('/fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
          url('/fonts/gilroy-extrabold-webfont.woff') format('woff');
+    font-display: swap;
     font-weight: normal;
     font-style: normal;
 }

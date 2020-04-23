@@ -247,12 +247,9 @@ p {
 
 .work-grid img {
     border-radius: 8px;
-<<<<<<< HEAD
     box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
-=======
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
->>>>>>> 89af801e3aad39c67cea972733f7538fc170bf73
 }
 
 .work-grid p {

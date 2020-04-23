@@ -1,6 +1,3 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
-/* 04/070/20 */
-
 @font-face {
     font-family: 'courier_primeregular';
     src: url('/fonts/courier_prime-webfont.woff2') format('woff2'),
@@ -21,7 +18,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Remove default padding */
@@ -96,7 +94,8 @@ select {
     -webkit-animation-iteration-count: 1 !important;
             animation-iteration-count: 1 !important;
     -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
+            -o-transition-duration: 0.01ms !important;
+       transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -161,14 +160,15 @@ h4 strong {
 .resume {
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+            box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
     display: grid;
     font-family: courier_primeregular;
     font-size: 16px;
     display: -ms-grid;
     display: grid;
     grid-gap: 2vw;
-        grid-template-areas:
+            grid-template-areas:
         "photo"
         "name"
         "about"
@@ -195,7 +195,7 @@ h4 strong {
 
 @media only screen and (min-width: 780px) {
     .resume {
-            grid-template-areas:
+                grid-template-areas:
             "name  photo"
             "work  about"
             "work  skills"
@@ -211,13 +211,16 @@ h4 strong {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column;
+            -ms-flex-direction: column;
+        flex-direction: column;
     grid-area: name;
     -webkit-box-pack: center;
-            justify-content: center;
+            -ms-flex-pack: center;
+        justify-content: center;
 }
 
 .name p {
@@ -228,12 +231,15 @@ h4 strong {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -webkit-box-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     grid-area: photo;
     -webkit-box-pack: center;
-            justify-content: center;;
+    -ms-flex-pack: center;
+    justify-content: center;;
 }
 
 .photo picture {
@@ -310,4 +316,14 @@ h4 strong {
     font-size: 14px;
     line-height: 2;
     opacity: .75;
+}
+
+footer {
+    padding: 3rem 1rem 4rem;
+    text-align: center;
+}
+
+footer .small {
+    font-size: 14px;
+    color: #666;
 }

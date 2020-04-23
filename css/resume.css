@@ -48,6 +48,7 @@ dd {
 
 /* Set core body defaults */
 body {
+    font-family: courier_primeregular, Arial, Helvetica, sans-serif;
     font-display: swap;
     min-height: 100vh;
     scroll-behavior: smooth;
@@ -163,7 +164,6 @@ h4 strong {
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
             box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
     display: grid;
-    font-family: courier_primeregular;
     font-size: 16px;
     display: -ms-grid;
     display: grid;

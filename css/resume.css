@@ -323,6 +323,10 @@ footer {
     text-align: center;
 }
 
+footer p {
+    margin-bottom: 1rem;
+}
+
 footer .small {
     font-size: 14px;
     color: #666;

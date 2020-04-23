@@ -152,9 +152,12 @@ h4 strong {
 
 /* RESUME */
 .resume {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+    display: grid;
     font-family: courier_primeregular;
     font-size: 16px;
-    display: grid;
     grid-gap: 2vw;
     grid-template-areas:
         "photo"
@@ -166,9 +169,10 @@ h4 strong {
         "community";
     grid-template-columns: 1fr;
     grid-template-rows: minmax(250px, auto);
-    margin: 0 auto;
-    max-width: 1440px;
+    margin: 10vh auto;
+    max-width: calc(100% - 10vw);
     padding: 2vw 6vw;
+    width: 1280px;
 }
 
 /* .resume {

@@ -1,22 +1,7 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-* Last Update: 9/18/20 12:02PM
-*/
-
 @font-face {
     font-family: 'courier_primeregular';
-    src: url('../fonts/courier_prime-webfont.woff2') format('woff2'),
-         url('../fonts/courier_prime-webfont.woff') format('woff');
+    src: url('fonts/courier_prime-webfont.woff2') format('woff2'),
+        url('fonts/courier_prime-webfont.woff') format('woff');
     font-display: swap;
     font-weight: normal;
     font-style: normal;
@@ -24,27 +9,50 @@
 
 @font-face {
     font-family: 'gilroy-extrabold';
-    src: url('../fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
-         url('../fonts/gilroy-extrabold-webfont.woff') format('woff');
+    src: url('fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+        url('fonts/gilroy-extrabold-webfont.woff') format('woff');
     font-display: swap;
     font-weight: normal;
     font-style: normal;
 }
 
+:root {
+    --color-blue: #4463ad;
+    --color-green: #008051;
+    --color-light-teal: #eef5f1;
+    --color-orange-dark: #ce3900;
+    --font-header: 'gilroy-extrabold', -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    --font-monospaced: 'courier_primeregular', 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    --font-size-xl: 2.667rem;
+    --font-size-lg: 2rem;
+    --font-size-md: 1.5rem;
+    --font-size-sm: 1.333rem;
+    --font-size-xs: .778rem;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+*:focus {
+    outline: 2px dotted var(--color-green);
+}
+
 html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    color: #222;
     font-size: 112.5%;
-    line-height: 1.4;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #EEF5F1;
-    color: #4463AD;
-    font-family: 'courier_primeregular', 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace; 
+    background-color: var(--color-light-teal);
+    color: var(--color-blue);
+    font-family: var(--font-monospaced);
     line-height: 1.6;
     margin: 0 auto;
     max-width: 1440px;
@@ -52,27 +60,14 @@ body {
 }
 
 header,
-section {
-    display: block;
-}
-
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
-
-h2 {
-    font-size: 18px;
-    margin-top: 0;
-}
-
+section,
 main {
     display: block;
 }
 
 a {
     background-color: transparent;
-    color: #008051;
+    color: var(--color-green);
     -webkit-text-decoration-skip: objects;
 }
 
@@ -88,17 +83,6 @@ img {
     vertical-align: middle;
 }
 
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: inherit;
-            box-sizing: inherit;
-}
-
-*:focus {
-    outline: 2px dotted #008051;
-}
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
     -webkit-text-decoration-skip: ink;
@@ -106,16 +90,16 @@ a:not([class]) {
 }
 
 .btn {
-    border: 3px solid #f94500;
-    color: #f94500;
+    border: 3px solid var(--color-orange-dark);
+    color: var(--color-orange-dark);
     padding: 0.5rem 1rem;
     text-decoration: none;
 }
 
 .btn:hover,
 .btn:focus {
-    background-color: #f94500;
-    color: #EEF5F1;
+    background-color: var(--color-orange-dark);
+    color: var(--color-light-teal);
     text-decoration: none;
 }
 
@@ -125,48 +109,55 @@ header {
 
 @media only screen and (min-width: 720px) {
     header {
-      padding: 8rem 4rem;
+        padding: 8rem 4rem;
     }
 }
-  .section1 {
+
+.section1 {
     margin: 0 auto;
     max-width: 718px;
 }
 
 header p {
-    font-size: 24px;
+    font-size: var(--font-size-sm);
 }
 
 h1,
 h2,
-h3,
-h4,
-h5 {
+h3 {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-    font-family: gilroy-extrabold, Arial, Helvetica, sans-serif;
-    font-size: 48px;
+    font-family: var(--font-header);
+    font-size: var(--font-size-xl);
     line-height: 1.2;
     margin-top: 0;
+    margin: 0 0 0.67em;
 }
 
 h2 {
-    font-family: gilroy-extrabold, Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-family: var(--font-header);
+    font-size: var(--font-size-sm);
+    margin-top: 0;
+}
+
+@media only screen and (min-width: 540px) {
+    h2 {
+        padding-left: 1rem;
+    }
 }
 
 @media only screen and (min-width: 720px) {
     h2 {
-      font-size: 36px;
+        font-size: var(--font-size-lg);
     }
 }
 
 h3 {
-    font-family: gilroy-extrabold, Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
+    font-family: var(--font-header);
+    font-size: var(--font-size-md);
     line-height: 1.2;
     margin-bottom: .5rem;
 }
@@ -176,7 +167,7 @@ h3 a {
 }
 
 h4 {
-    font-family: gilroy-extrabold, Arial, Helvetica, sans-serif;
+    font-family: var(--font-header);
     margin-bottom: 0;
 }
 
@@ -205,25 +196,48 @@ p {
     }
 }
 
+.first picture {
+    display: block;
+    height: auto;
+    position: relative;
+}
+
+@media only screen and (min-width: 720px) {
+    .first picture::after {
+        background-color: rgba(0,0,0,0.05);
+        bottom: 0;
+        content: '';
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        -webkit-transform: translate(1rem, 1rem);
+            -ms-transform: translate(1rem, 1rem);
+                transform: translate(1rem, 1rem);
+        z-index: -1;
+    }
+}
+
 @media only screen and (min-width: 720px) {
     .section2 .first,
     .section2 .second {
-      width: 50%;
+    width: 50%;
     }
 }
-  .section2 .first img {
+.section2 .first img {
     width: 100%;
     height: 100%;
     max-height: 540px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
 }
 
 @media only screen and (min-width: 720px) {
     .section2 .first {
-      background-size: 720px auto;
+    background-size: 720px auto;
     }
 }
 
@@ -266,7 +280,7 @@ p {
 }
 
 .work-grid img {
-    background-color: #4463ad;
+    background-color: var(--color-blue);
     border-radius: 8px;
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
             box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
@@ -274,20 +288,14 @@ p {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.work-grid p {
-    color: #666;
-    font-size: 16px;
-    margin-bottom: 0;
-}
-
 .work-grid [href] {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-all;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+overflow-wrap: break-word;
+word-wrap: break-word;
+word-break: break-all;
+word-break: break-word;
+-webkit-hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto;
 }
 
 @media only screen and (min-width: 540px) {
@@ -300,15 +308,15 @@ p {
 }
 
 .work-grid li {
-      margin-bottom: 2rem;
-      padding: 1rem;
-      width: 50%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 50%;
     }
 }
 
 @media only screen and (min-width: 720px) {
     .work-grid li {
-      width: 33.333%;
+    width: 33.333%;
     }
 }
 
@@ -318,14 +326,13 @@ footer {
 }
 
 footer .small {
-    color: #000;
-    font-size: 14px;
+    font-size: var(--font-size-xs);
 }
 
 @media (prefers-color-scheme: dark) {
-	body {
-		background-color: #4463ad;
-		color: #eef5f1;
+    body {
+        background-color: var(--color-blue);
+        color: var(--color-light-teal);
     }
 
     a {
@@ -348,6 +355,6 @@ footer .small {
     }
 
     footer .small {
-        color: #eef5f1;
+        color: var(--color-light-teal);
     }
 }
